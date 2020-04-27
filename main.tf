@@ -11,17 +11,17 @@ resource "aws_iam_policy" "s3_user_policy"{
   name="s3_fullaccess_policy"
   description="give sai s3 full access"
   
-  policy=<<EOF
-  {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": "s3:*",
-            "Resource": "*"
-        }
-    ]
-  }
+    policy=<<EOF
+    {
+      "Version": "2012-10-17",
+      "Statement": [
+          {
+              "Effect": "Allow",
+              "Action": "s3:*",
+              "Resource": "*"
+          }
+      ]
+    }
   EOF
   }
 resource "aws_iam_policy_attachment" "iam_attach_policy"{
