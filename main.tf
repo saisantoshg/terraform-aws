@@ -11,7 +11,7 @@ resource "aws_iam_policy" "s3_user_policy"{
   name="s3_fullaccess_policy"
   description="give sai s3 full access"
   
-    policy=<<EOF
+    policy="
     {
       "Version": "2012-10-17",
       "Statement": [
@@ -22,7 +22,7 @@ resource "aws_iam_policy" "s3_user_policy"{
           }
       ]
     }
-  EOF
+  "
   }
 resource "aws_iam_policy_attachment" "iam_attach_policy"{
   name       = "test-attachment"
