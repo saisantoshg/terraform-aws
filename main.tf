@@ -4,5 +4,5 @@ provider "aws" {
   }
 
 data "aws_iam_user" "iam_user"{
-  user_name="user1"
+  user_name="terraform_admin"
   }
