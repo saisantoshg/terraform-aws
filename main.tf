@@ -16,5 +16,9 @@ resource "aws_iam_policy_attachment" "iam_attach_policy"{
   name       = "test-attachment"
   users      = ["${aws_iam_user.iam_user.name}"]
   policy_arn = "${aws_iam_policy.s3_user_policy.arn}"
-  
+  }
+resource "aws_iam_policy_attachment" "iam_ec2_attach_policy"{
+  name       = "test-attachment"
+  users      = ["${aws_iam_user.iam_user.name}"]
+  policy_arn = "arn:aws:iam::aws:policy/AmazonEC2FullAccess"
   }
