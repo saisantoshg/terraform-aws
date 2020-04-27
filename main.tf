@@ -3,6 +3,6 @@ provider "aws" {
   region="ap-south-1"
   }
 
-data "aws_iam_user" "iam_user"{
+data "aws_iam_user" "sai"{
   name="sai"
   }
