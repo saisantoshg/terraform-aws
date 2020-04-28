@@ -22,3 +22,11 @@ resource "aws_iam_policy_attachment" "iam_ec2_attach_policy"{
   users      = ["${aws_iam_user.iam_user.name}"]
   policy_arn = "arn:aws:iam::aws:policy/AmazonEC2FullAccess"
   }
+resource "aws_s3_bucket" "s3_clientbucket" {
+  bucket = "client1_sourcefiles"
+  acl    = "private"
+
+  versioning {
+    enabled = true
+  }
+}
