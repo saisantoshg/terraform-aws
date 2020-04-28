@@ -23,7 +23,7 @@ resource "aws_iam_policy_attachment" "iam_ec2_attach_policy"{
   policy_arn = "arn:aws:iam::aws:policy/AmazonEC2FullAccess"
   }
 resource "aws_s3_bucket" "s3_clientbucket" {
-  bucket = var.bucket_name
+  bucket = var.bucket_name1
   acl    = "private"
 
   versioning {
@@ -31,7 +31,7 @@ resource "aws_s3_bucket" "s3_clientbucket" {
   }
 }
 resource "aws_s3_bucket_public_access_block" "block_s3_clientbucket" {
-  bucket = var.bucket_name
+  bucket = var.bucket_name1
 
   block_public_acls   = true
   block_public_policy = true
