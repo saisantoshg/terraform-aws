@@ -1,3 +1,3 @@
-variable "bucke_name"{
+variable "bucket_name"{
   type="client2"
   }
