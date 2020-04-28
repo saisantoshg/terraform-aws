@@ -31,7 +31,7 @@ resource "aws_s3_bucket" "s3_clientbucket" {
   }
 }
 resource "aws_s3_bucket_public_access_block" "block_s3_clientbucket" {
-  bucket = "${aws_s3_bucket.s3_clientbucket.id}"
+  bucket = "client1-sourcefiles"
 
   block_public_acls   = true
   block_public_policy = true
