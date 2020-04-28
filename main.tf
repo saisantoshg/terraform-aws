@@ -23,7 +23,7 @@ resource "aws_iam_policy_attachment" "iam_ec2_attach_policy"{
   policy_arn = "arn:aws:iam::aws:policy/AmazonEC2FullAccess"
   }
 resource "aws_s3_bucket" "s3_clientbucket" {
-  bucket = "client1_sourcefiles"
+  bucket = "client1-sourcefiles"
   acl    = "private"
 
   versioning {
